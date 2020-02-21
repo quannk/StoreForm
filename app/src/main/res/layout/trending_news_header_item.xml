@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="@dimen/size_160"
+        android:background="@drawable/bg_trending_news_header_item"
+        android:layout_marginEnd="@dimen/size_16"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_top_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="@dimen/size_20"
+            android:layout_width="@dimen/size_85"
+            android:scaleType="centerCrop"
+            android:layout_height="@dimen/size_85"
+            android:background="@color/gray_8A8A8F"
+            />
+        <TextView
+            android:id="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/iv_top_image"
+            android:layout_width="match_parent"
+            android:textSize="@dimen/text_size_15"
+            android:ellipsize="end"
+            android:fontFamily="@font/san_francisco_display_semibold"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/size_12"
+            android:text="Đăng kí tài khoản"
+            android:layout_height="wrap_content"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_channel"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="@dimen/size_12"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="@dimen/size_12"
+            android:layout_marginStart="@dimen/size_7"
+            android:fontFamily="@font/san_francisco_display_medium"
+            android:text="20 xu"
+            android:textColor="@color/black_8"
+            android:textSize="@dimen/text_size_13"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

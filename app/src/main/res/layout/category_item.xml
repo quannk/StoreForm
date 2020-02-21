@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="@dimen/size_240"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_16"
+        android:background="@drawable/bg_categogy_item">
+
+        <ImageView
+            android:id="@+id/iv_top_image"
+            android:layout_width="@dimen/size_85"
+            android:layout_height="@dimen/size_85"
+            android:layout_marginTop="@dimen/size_20"
+            android:background="@color/gray_8A8A8F"
+            android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_12"
+            android:ellipsize="end"
+            android:fontFamily="@font/san_francisco_display_semibold"
+            android:text="Loại bỏ vi khuẩn"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18"
+            app:layout_constraintTop_toBottomOf="@id/iv_top_image" />
+
+        <TextView
+            android:id="@+id/tv_channel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_7"
+            android:layout_marginTop="@dimen/size_12"
+            android:layout_marginBottom="@dimen/size_12"
+            android:fontFamily="@font/san_francisco_display_medium"
+            android:text="Giảm đến 50%"
+            android:textColor="@color/black_8"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
