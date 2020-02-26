@@ -1,4 +1,4 @@
-package com.example.storeform.ui.home;
+package com.example.storeform.ui.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,6 +17,7 @@ import com.example.storeform.adapter.TrendingAdapter;
 import com.example.storeform.databinding.FragmentHomeStoreBinding;
 import com.example.storeform.model.CategoryItem;
 import com.example.storeform.model.StoreItem;
+import com.example.storeform.ui.control.HomeViewModel;
 
 import java.util.List;
 
@@ -49,7 +50,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void initAdapter() {
-        setData();
+        getData();
         categoryAdapter = new CategoryAdapter(this.getContext());
         categoryAdapter.setCategoryItemList(listCategory);
         mBinding.layoutTopNews.rcvNewsList.setAdapter(categoryAdapter);
@@ -60,8 +61,10 @@ public class HomeFragment extends Fragment {
         mBinding.layoutTrending.girdTrending.setAdapter(trendingAdapter);
     }
 
-    private void setData() {
+    private void getData() {
         // cho nay doc data tu file, tam thời thế đã
+        homeViewModel.getCategoryItem();
+
     }
 
 

@@ -13,11 +13,12 @@ import com.example.storeform.R;
 import com.example.storeform.databinding.CategoryItemBinding;
 import com.example.storeform.model.CategoryItem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
-    private List<CategoryItem> categoryItemList ;
+    private List<CategoryItem> categoryItemList = new ArrayList<>();
 
     public CategoryAdapter(Context context) {
         this.context = context;
@@ -44,7 +45,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     @Override
     public int getItemCount() {
-        return 0;
+        return 10;
     }
 
     private class CategoryItemViewHolder extends RecyclerView.ViewHolder {

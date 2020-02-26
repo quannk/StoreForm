@@ -19,7 +19,7 @@ import java.util.List;
 
 public class TrendingAdapter extends BaseAdapter{
     private Context context;
-    private List<StoreItem> listItem;
+    private List<StoreItem> listItem = new ArrayList<>();
 
 
     public TrendingAdapter(Context context) {

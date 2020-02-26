@@ -1,4 +1,4 @@
-package com.example.storeform.ui.slideshow;
+package com.example.storeform.ui.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,18 +13,19 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.storeform.R;
+import com.example.storeform.ui.control.SendViewModel;
 
-public class SlideshowFragment extends Fragment {
+public class SendFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
+    private SendViewModel sendViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
-        slideshowViewModel.getText().observe(this, new Observer<String>() {
+        sendViewModel =
+                ViewModelProviders.of(this).get(SendViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_send, container, false);
+        final TextView textView = root.findViewById(R.id.text_send);
+        sendViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

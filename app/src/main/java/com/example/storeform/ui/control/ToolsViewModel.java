@@ -1,16 +1,16 @@
-package com.example.storeform.ui.send;
+package com.example.storeform.ui.control;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SendViewModel extends ViewModel {
+public class ToolsViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public SendViewModel() {
+    public ToolsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is send fragment");
+        mText.setValue("This is tools fragment");
     }
 
     public LiveData<String> getText() {

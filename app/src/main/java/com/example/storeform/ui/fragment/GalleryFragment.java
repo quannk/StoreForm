@@ -1,4 +1,4 @@
-package com.example.storeform.ui.gallery;
+package com.example.storeform.ui.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.storeform.R;
+import com.example.storeform.ui.control.GalleryViewModel;
 
 public class GalleryFragment extends Fragment {
 

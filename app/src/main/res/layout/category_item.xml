@@ -2,7 +2,7 @@
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="@dimen/size_240"
+        android:layout_width="@dimen/size_250"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/size_16"
         android:background="@drawable/bg_categogy_item">
@@ -20,7 +20,7 @@
 
         <TextView
             android:id="@+id/tv_title"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/size_12"
             android:ellipsize="end"
@@ -28,6 +28,8 @@
             android:text="Loại bỏ vi khuẩn"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_18"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_top_image" />
 
         <TextView

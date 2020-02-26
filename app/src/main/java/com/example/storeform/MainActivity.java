@@ -2,6 +2,8 @@ package com.example.storeform;
 
 import android.os.Bundle;
 
+import com.example.storeform.ui.control.PreferenceUtil;
+import com.example.storeform.ui.control.Repository;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -22,8 +24,10 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 
 public class MainActivity extends AppCompatActivity {
+    private final String TAG = this.getClass().getName();
 
     private AppBarConfiguration mAppBarConfiguration;
+    private Repository repository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,5 +69,16 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    private void login(){
+        String address = "";
+        String port="";
+
+        initSocket(address, port);
+    }
+
+    private void initSocket(String address, String port) {
+        repository.setSocketData(address, port, PreferenceUtil.getSessionId());
     }
 }

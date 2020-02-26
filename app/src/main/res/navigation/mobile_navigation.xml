@@ -7,37 +7,37 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.storeform.ui.home.HomeFragment"
+        android:name="com.example.storeform.ui.fragment.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home_store" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.storeform.ui.gallery.GalleryFragment"
+        android:name="com.example.storeform.ui.fragment.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.storeform.ui.slideshow.SlideshowFragment"
+        android:name="com.example.storeform.ui.fragment.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
         android:id="@+id/nav_tools"
-        android:name="com.example.storeform.ui.tools.ToolsFragment"
+        android:name="com.example.storeform.ui.fragment.ToolsFragment"
         android:label="@string/menu_tools"
         tools:layout="@layout/fragment_tools" />
 
     <fragment
         android:id="@+id/nav_share"
-        android:name="com.example.storeform.ui.share.ShareFragment"
+        android:name="com.example.storeform.ui.fragment.ShareFragment"
         android:label="@string/menu_share"
         tools:layout="@layout/fragment_share" />
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="com.example.storeform.ui.send.SendFragment"
+        android:name="com.example.storeform.ui.fragment.SendFragment"
         android:label="@string/menu_send"
         tools:layout="@layout/fragment_send" />
 </navigation>
