@@ -1,33 +1,29 @@
 package com.example.storeform;
 
 import android.os.Bundle;
-
-import com.example.storeform.ui.control.PreferenceUtil;
-import com.example.storeform.ui.control.Repository;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
+import android.view.Menu;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.storeform.ui.control.AppManager;
+import com.example.storeform.ui.control.PreferenceUtil;
+import com.example.storeform.ui.control.Repository;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.view.Menu;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     private final String TAG = this.getClass().getName();
 
     private AppBarConfiguration mAppBarConfiguration;
-    private Repository repository;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +51,15 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        //
+        getDeviceInfor();
+
+    }
+
+
+    private void getDeviceInfor() {
+
     }
 
     @Override
@@ -71,14 +76,15 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    private void login(){
+    private void login() {
         String address = "";
-        String port="";
-
-        initSocket(address, port);
+        String port = "";
+        if (!preferenceUtil.getLoginSuccess()) {
+                // thong bao dang nhap that bai
+        } else initSocket(address, port);
     }
 
     private void initSocket(String address, String port) {
-        repository.setSocketData(address, port, PreferenceUtil.getSessionId());
+        repository.setSocketData(address, port, preferenceUtil.getSessionId());
     }
 }

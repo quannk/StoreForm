@@ -28,4 +28,7 @@ public class Repository {
 
         socketManager.initSocket(address, port,sessionId);
     }
+
+    public void setDataType(String apiType) {
+    }
 }
