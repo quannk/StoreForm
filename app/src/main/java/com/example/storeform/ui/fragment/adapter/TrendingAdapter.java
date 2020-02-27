@@ -1,4 +1,4 @@
-package com.example.storeform.adapter;
+package com.example.storeform.ui.fragment.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,13 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.storeform.R;
 import com.example.storeform.databinding.CategoryItemBinding;
-import com.example.storeform.model.StoreItem;
+import com.example.storeform.model.enity.StoreItem;
 
 import java.util.ArrayList;
 import java.util.List;

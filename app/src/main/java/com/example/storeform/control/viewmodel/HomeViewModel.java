@@ -1,19 +1,21 @@
-package com.example.storeform.ui.control;
+package com.example.storeform.control.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
 
-public class ToolsViewModel extends ViewModel {
+public class HomeViewModel extends BaseViewModel {
 
     private MutableLiveData<String> mText;
 
-    public ToolsViewModel() {
+    public HomeViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is tools fragment");
+        mText.setValue("This is home fragment");
     }
 
     public LiveData<String> getText() {
         return mText;
+    }
+
+    public void getCategoryItem() {
     }
 }

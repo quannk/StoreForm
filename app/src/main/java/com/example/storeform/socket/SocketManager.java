@@ -2,24 +2,24 @@ package com.example.storeform.socket;
 
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
-
 import com.google.gson.Gson;
 
-
 public class SocketManager {
+    private static final SocketManager INSTANCE = new SocketManager();
     private Socket socket;
     private Gson gson;
 
     private String address, port, sessionId;
     private boolean isConnecting;
     private boolean isConnect;
+    public static SocketManager getInstance() {
+        return INSTANCE;
+    }
 
     public void initSocket(String address, String port, String sessionId) {
         this.address = address;
         this.port = port;
         this.sessionId = sessionId;
-        initSocket();
-
         if (socket==null){
             //
             return;
@@ -56,6 +56,4 @@ public class SocketManager {
 
     }
 
-    private void initSocket() {
-    }
 }

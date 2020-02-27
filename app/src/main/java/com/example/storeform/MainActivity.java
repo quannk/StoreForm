@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
@@ -12,15 +11,17 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.storeform.ui.control.AppManager;
-import com.example.storeform.ui.control.PreferenceUtil;
-import com.example.storeform.ui.control.Repository;
+import com.example.storeform.mvc.IController;
+import com.example.storeform.mvc.Mvc;
+import com.example.storeform.socket.SocketClientProxy;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends BaseActivity {
     private final String TAG = this.getClass().getName();
+    private IController loginController;
+    private IController connectionController;
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -54,7 +55,7 @@ public class MainActivity extends BaseActivity {
 
         //
         getDeviceInfor();
-
+        initSocket();
     }
 
 
@@ -81,10 +82,18 @@ public class MainActivity extends BaseActivity {
         String port = "";
         if (!preferenceUtil.getLoginSuccess()) {
                 // thong bao dang nhap that bai
-        } else initSocket(address, port);
+        } else initSocket();
     }
 
-    private void initSocket(String address, String port) {
-        repository.setSocketData(address, port, preferenceUtil.getSessionId());
+    private void initComponents() {
+        Mvc mvc = Mvc.getInstance();
+        loginController = mvc.getController("login");
+        connectionController = mvc.getController("connection");
     }
+
+    private void initSocket() {
+        SocketClientProxy clientProxy = SocketClientProxy.getInstance();
+        clientProxy.connect();
+    }
+
 }

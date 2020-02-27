@@ -1,4 +1,4 @@
-package com.example.storeform.ui.control;
+package com.example.storeform.control;
 
 import android.content.Context;
 

@@ -1,9 +1,13 @@
-package com.example.storeform.model;
+package com.example.storeform.model.enity;
 
-public class StoreItem {
-
+public class CategoryItem {
     private String name;
     private String type;
+
+    public CategoryItem(String name, String type) {
+        this.name = name;
+        this.type = type;
+    }
 
     public String getName() {
         return name;

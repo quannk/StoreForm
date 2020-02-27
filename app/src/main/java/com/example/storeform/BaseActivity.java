@@ -6,14 +6,14 @@ import android.os.PersistableBundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.storeform.ui.control.AppManager;
-import com.example.storeform.ui.control.PreferenceUtil;
-import com.example.storeform.ui.control.Repository;
+import com.example.storeform.control.AppManager;
+import com.example.storeform.control.PreferenceUtil;
+import com.example.storeform.control.Repository;
 
 public class BaseActivity extends AppCompatActivity {
-    private Repository repository;
-    private PreferenceUtil preferenceUtil;
-    private AppManager appManager;
+    protected Repository repository;
+    protected PreferenceUtil preferenceUtil;
+    protected AppManager appManager;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {

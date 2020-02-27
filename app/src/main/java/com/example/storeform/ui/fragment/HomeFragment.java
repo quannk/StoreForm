@@ -12,12 +12,12 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.storeform.R;
-import com.example.storeform.adapter.CategoryAdapter;
-import com.example.storeform.adapter.TrendingAdapter;
+import com.example.storeform.ui.fragment.adapter.CategoryAdapter;
+import com.example.storeform.ui.fragment.adapter.TrendingAdapter;
 import com.example.storeform.databinding.FragmentHomeStoreBinding;
-import com.example.storeform.model.CategoryItem;
-import com.example.storeform.model.StoreItem;
-import com.example.storeform.ui.control.HomeViewModel;
+import com.example.storeform.model.enity.CategoryItem;
+import com.example.storeform.model.enity.StoreItem;
+import com.example.storeform.control.viewmodel.HomeViewModel;
 
 import java.util.List;
 

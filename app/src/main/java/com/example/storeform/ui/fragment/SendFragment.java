@@ -13,7 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.storeform.R;
-import com.example.storeform.ui.control.SendViewModel;
+import com.example.storeform.control.viewmodel.SendViewModel;
 
 public class SendFragment extends Fragment {
 

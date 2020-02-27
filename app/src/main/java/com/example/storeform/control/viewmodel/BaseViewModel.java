@@ -1,13 +1,13 @@
-package com.example.storeform.ui.control;
+package com.example.storeform.control.viewmodel;
 
 import android.os.Handler;
 
 import androidx.lifecycle.ViewModel;
 
+import com.example.storeform.control.AppManager;
+import com.example.storeform.control.PreferenceUtil;
+import com.example.storeform.control.Repository;
 import com.example.storeform.data.MyRoomDatabase;
-import com.example.storeform.ui.control.AppManager;
-import com.example.storeform.ui.control.PreferenceUtil;
-import com.example.storeform.ui.control.Repository;
 
 class BaseViewModel extends ViewModel {
 

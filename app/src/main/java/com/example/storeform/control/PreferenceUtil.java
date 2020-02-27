@@ -1,8 +1,6 @@
-package com.example.storeform.ui.control;
+package com.example.storeform.control;
 
 import android.content.Context;
-
-import com.example.storeform.MainActivity;
 
 public class PreferenceUtil {
     private static String userId;

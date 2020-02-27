@@ -1,4 +1,4 @@
-package com.example.storeform.ui.control;
+package com.example.storeform.control.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

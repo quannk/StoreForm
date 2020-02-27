@@ -1,11 +1,9 @@
-package com.example.storeform.ui.control;
+package com.example.storeform.control;
 
 import android.content.Context;
 import android.util.Log;
 
 import com.example.storeform.socket.SocketManager;
-
-import java.util.logging.Logger;
 
 public class Repository {
     private static Repository instance;

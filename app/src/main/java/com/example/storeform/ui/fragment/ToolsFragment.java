@@ -13,7 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.storeform.R;
-import com.example.storeform.ui.control.ToolsViewModel;
+import com.example.storeform.control.viewmodel.ToolsViewModel;
 
 public class ToolsFragment extends Fragment {
 
