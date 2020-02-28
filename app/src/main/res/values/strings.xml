@@ -17,4 +17,5 @@
     <string name="tv_flash_sale">Flash Sale</string>
     <string name="category_list">Danh mục loại hàng</string>
     <string name="trending_item">Các loại hàng phổ biến</string>
+    <string name="text_my_bill">Đơn hàng của tôi</string>
 </resources>

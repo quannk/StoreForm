@@ -2,10 +2,14 @@ package com.example.storeform;
 
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -14,9 +18,11 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.storeform.mvc.IController;
 import com.example.storeform.mvc.Mvc;
 import com.example.storeform.socket.SocketClientProxy;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
+import com.example.storeform.ui.fragment.CartFragment;
+import com.example.storeform.ui.fragment.HomeFragment;
+import com.example.storeform.ui.fragment.ProfileFragment;
+import com.example.storeform.ui.fragment.SmsFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends BaseActivity {
     private final String TAG = this.getClass().getName();
@@ -24,38 +30,49 @@ public class MainActivity extends BaseActivity {
     private IController connectionController;
 
     private AppBarConfiguration mAppBarConfiguration;
+    private BottomNavigationView bottomNavigation;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
-                R.id.nav_tools, R.id.nav_share, R.id.nav_send)
-                .setDrawerLayout(drawer)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
+        bottomNavigation = findViewById(R.id.bottom_navigation);
+        bottomNavigation.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
+        openFragment(HomeFragment.newInstance("", ""));
 
         //
         getDeviceInfor();
         initSocket();
+    }
+
+        BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener =
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.navigation_home:
+                                openFragment(HomeFragment.newInstance("", ""));
+                                return true;
+                            case R.id.navigation_sms:
+                                openFragment(SmsFragment.newInstance("", ""));
+                                return true;
+                            case R.id.navigation_cart:
+                                openFragment(CartFragment.newInstance("", ""));
+                                return true;
+                            case R.id.navigation_profile:
+                                openFragment(ProfileFragment.newInstance("", ""));
+                                return true;
+                        }
+                        return false;
+                    }
+                };
+
+
+    public void openFragment(Fragment fragment) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
 
@@ -81,7 +98,7 @@ public class MainActivity extends BaseActivity {
         String address = "";
         String port = "";
         if (!preferenceUtil.getLoginSuccess()) {
-                // thong bao dang nhap that bai
+            // thong bao dang nhap that bai
         } else initSocket();
     }
 

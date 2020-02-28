@@ -110,7 +110,7 @@ public class SocketClientProxy {
 
     public void connect() {
         EzyClient client = getClient();
-        client.connect("ws.tvd12.com", 3005);
+//        client.connect("ws.tvd12.com", 3005);
     }
 
     public EzyClient getClient() {

@@ -23,6 +23,7 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
+    private static HomeFragment instance;
     private HomeViewModel homeViewModel;
     private CategoryAdapter categoryAdapter;
     private TrendingAdapter trendingAdapter;
@@ -31,6 +32,12 @@ public class HomeFragment extends Fragment {
     private List<StoreItem> listStore;
     private RecyclerView rcvHeader;
     FragmentHomeStoreBinding mBinding;
+
+    public static HomeFragment newInstance(String s, String s1) {
+        if (instance== null) instance = new HomeFragment();
+        return instance;
+
+    }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
