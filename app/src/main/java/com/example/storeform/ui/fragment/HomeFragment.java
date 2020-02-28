@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.storeform.R;
@@ -60,8 +61,8 @@ public class HomeFragment extends Fragment {
         getData();
         categoryAdapter = new CategoryAdapter(this.getContext());
         categoryAdapter.setCategoryItemList(listCategory);
+        mBinding.layoutTopNews.rcvNewsList.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         mBinding.layoutTopNews.rcvNewsList.setAdapter(categoryAdapter);
-
 
         trendingAdapter = new TrendingAdapter(this.getContext());
         trendingAdapter.setListItem(listStore);

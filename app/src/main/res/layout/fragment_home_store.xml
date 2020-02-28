@@ -20,7 +20,7 @@
 
                 <include
                     android:id="@+id/layout_top_news"
-                    layout="@layout/item_trending_news_header"
+                    layout="@layout/layout_trending_header"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     app:layout_constraintLeft_toLeftOf="parent"
