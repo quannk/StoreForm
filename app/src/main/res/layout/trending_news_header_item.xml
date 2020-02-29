@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="@dimen/size_160"
+        android:layout_width="@dimen/size_200"
         android:background="@drawable/bg_trending_news_header_item"
-        android:layout_marginEnd="@dimen/size_16"
-        android:layout_height="wrap_content">
+        android:layout_height="@dimen/size_200">
         <ImageView
             android:id="@+id/iv_top_image"
             app:layout_constraintTop_toTopOf="parent"
@@ -19,13 +18,15 @@
         <TextView
             android:id="@+id/tv_title"
             app:layout_constraintTop_toBottomOf="@id/iv_top_image"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:textSize="@dimen/text_size_15"
             android:ellipsize="end"
             android:fontFamily="@font/san_francisco_display_semibold"
             android:textColor="@color/black"
-            android:layout_margin="@dimen/size_12"
+            android:layout_margin="@dimen/size_6"
             android:text="Đăng kí tài khoản"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             android:layout_height="wrap_content"/>
 
 

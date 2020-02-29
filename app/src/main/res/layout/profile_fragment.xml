@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44"
+            android:background="@color/white"
+            android:elevation="2dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_left"
+                android:layout_width="@dimen/size_40"
+                android:layout_height="@dimen/size_40"
+                android:layout_marginLeft="@dimen/size_5"
+                android:background="@drawable/bg_all_ripple_click"
+                android:padding="@dimen/size_10"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back" />
+
+            <ImageView
+                android:id="@+id/iv_scan"
+                android:layout_width="@dimen/size_44"
+                android:layout_height="@dimen/size_44"
+                android:layout_marginLeft="@dimen/size_3"
+                android:background="@drawable/bg_all_ripple_click"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_qr_code_scan" />
+
+
+            <ImageView
+                android:id="@+id/img_right"
+                android:layout_width="@dimen/size_40"
+                android:layout_height="@dimen/size_40"
+                android:background="@drawable/bg_all_ripple_click"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_setting_profile" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:fontFamily="@font/san_francisco_display_semibold"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_size_17"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/img_left"
+                app:layout_constraintRight_toLeftOf="@id/img_right"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#EFEFF4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/action_bar">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/sv_root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/appbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EFEFF4"
+                    android:orientation="vertical"
+                    app:elevation="0dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/layout_user_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:paddingBottom="@dimen/size_10"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/layout_user"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/layout_card_avatar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/card_avatar"
+                                        android:layout_width="@dimen/size_100"
+                                        android:layout_height="@dimen/size_100"
+                                        android:layout_marginLeft="@dimen/size_20"
+                                        android:layout_marginTop="@dimen/size_20"
+                                        app:cardCornerRadius="@dimen/size_50"
+                                        app:cardPreventCornerOverlap="false"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <ImageView
+                                            android:id="@+id/img_avartar"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:scaleType="centerCrop"
+                                            android:src="@drawable/ic_beer"
+                                            />
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <ImageView
+                                    android:id="@+id/image_tick"
+                                    android:layout_width="@dimen/size_36"
+                                    android:layout_height="@dimen/size_36"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="@id/layout_card_avatar"
+                                    app:layout_constraintRight_toRightOf="@id/layout_card_avatar"></ImageView>
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/card_camera"
+                                    android:layout_width="@dimen/size_40"
+                                    android:layout_height="@dimen/size_40"
+                                    android:background="@drawable/bg_camera_profile"
+                                    android:visibility="gone"
+                                    app:cardCornerRadius="@dimen/size_20"
+                                    app:cardElevation="2dp"
+                                    app:cardPreventCornerOverlap="false"
+                                    app:layout_constraintBottom_toBottomOf="@id/layout_card_avatar"
+                                    app:layout_constraintRight_toRightOf="@id/layout_card_avatar">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/size_24"
+                                        android:layout_height="@dimen/size_24"
+                                        android:layout_gravity="center"
+                                        android:scaleType="fitXY"
+                                        app:srcCompat="@drawable/ic_camera_profile" />
+
+                                </androidx.cardview.widget.CardView>
+
+                                <TextView
+                                    android:id="@+id/tv_user_name"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/size_20"
+                                    android:layout_marginTop="@dimen/size_32"
+                                    android:fontFamily="@font/san_francisco_display_semibold"
+                                    android:gravity="left"
+                                    android:textColor="#111111"
+                                    android:text="Nguy Khac Quan"
+                                    android:textSize="@dimen/text_size_18"
+                                    app:layout_constraintLeft_toRightOf="@id/layout_card_avatar"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_status"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/size_15"
+                                    android:layout_marginRight="@dimen/size_20"
+                                    android:fontFamily="@font/san_francisco_display_regular"
+                                    android:gravity="left"
+                                    android:textColor="#888888"
+                                    android:textSize="@dimen/text_size_13"
+                                    android:text="097654321"
+                                    app:layout_constraintLeft_toLeftOf="@id/tv_user_name"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/tv_user_name" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <include
+                            android:id="@+id/my_order"
+                            layout="@layout/layout_myorder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/layout_user_info" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.appbar.AppBarLayout>
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
