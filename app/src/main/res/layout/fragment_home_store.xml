@@ -19,13 +19,21 @@
                 android:orientation="vertical">
 
                 <include
-                    android:id="@+id/layout_top_news"
-                    layout="@layout/layout_trending_header"
+                    android:id="@+id/layout_search"
+                    layout="@layout/layout_search_home"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent" />
 
+                <include
+                    android:id="@+id/layout_top_news"
+                    layout="@layout/layout_trending_header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/layout_search"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
 
                 <include
                     android:id="@+id/layout_news"

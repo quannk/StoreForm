@@ -51,4 +51,13 @@
     <dimen name="size_30">30dp</dimen>
     <dimen name="size_32">32dp</dimen>
     <dimen name="size_120">120dp</dimen>
+    <dimen name="size_42">42dp</dimen>
+    <dimen name="size_19">19dp</dimen>
+    <dimen name="text_size_16">16dp</dimen>
+    <dimen name="size_2">2dp</dimen>
+    <dimen name="text_size_11">11sp</dimen>
+    <dimen name="size_96">96dp</dimen>
+    <dimen name="size_124">124dp</dimen>
+    <dimen name="size_11">11dp</dimen>
+    <dimen name="size_130">130dp</dimen>
 </resources>

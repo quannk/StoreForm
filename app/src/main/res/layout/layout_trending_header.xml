@@ -15,6 +15,7 @@
         android:textColor="@color/black"
         android:textSize="@dimen/size_24"
         android:fontFamily="@font/san_francisco_display_semibold"
+        android:visibility="gone"
         android:layout_marginBottom="@dimen/size_12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,7 +27,7 @@
             android:layout_marginTop="@dimen/size_12"
             android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/trending_news_header_item"
+            tools:listitem="@layout/item_header_type"
             android:layout_height="wrap_content"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_E5E5E5"
+        tools:context="com.vivavietnam.lotus.view.activity.search.SearchActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_search_suggest"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bt_back"
+                android:layout_width="@dimen/size_42"
+                android:layout_height="@dimen/size_32"
+
+                android:background="@drawable/bg_all_ripple_click"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="@dimen/size_20"
+                    android:layout_marginLeft="@dimen/size_19"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@color/colorPrimary" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view_search"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size_36"
+                android:layout_marginLeft="@dimen/size_8"
+                android:layout_marginRight="@dimen/size_16"
+                android:background="@drawable/bg_search_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/bt_back"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/edt_search"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size_36"
+                android:layout_marginLeft="@dimen/size_12"
+                android:layout_marginRight="@dimen/size_12"
+                android:background="@drawable/bg_search_home"
+                android:fontFamily="@font/san_francisco_display_regular"
+                android:hint="Nhập từ khóa tìm kiếm ..."
+                android:imeOptions="actionSearch"
+                android:paddingLeft="@dimen/size_10"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="#8A8A8F"
+                android:textSize="@dimen/text_size_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/view_search"
+                app:layout_constraintRight_toLeftOf="@id/img_logo"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="@dimen/size_30"
+                android:layout_height="@dimen/size_18"
+                android:layout_marginRight="@dimen/size_10"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="@id/view_search"
+                app:layout_constraintRight_toRightOf="@id/view_search"
+                app:layout_constraintTop_toTopOf="@id/view_search"
+                 />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

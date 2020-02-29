@@ -37,4 +37,8 @@ public class PreferenceUtil {
     public void setLoginSuccess(boolean loginSuccess) {
         isLoginSuccess = loginSuccess;
     }
+
+    public String getDomainThumb() {
+        return "";
+    }
 }
