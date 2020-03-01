@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.storeform.CustomData;
+import com.example.storeform.DetailStoreItemActivity;
 import com.example.storeform.R;
 import com.example.storeform.control.viewmodel.HomeViewModel;
 import com.example.storeform.databinding.FragmentHomeStoreBinding;
@@ -119,14 +120,12 @@ public class HomeFragment extends Fragment {
         CustomData.getInstance().addDataStore(listStoreTopItem);
         listStore = new ArrayList<>();
         CustomData.getInstance().addDataCategogy(listStore);
-
-
     }
 
     private View.OnClickListener clickCategoryItemListenner= new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            DetailStoreItemActivity.start(getContext());
         }
     };
 

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_main"
+            android:layout_width="@dimen/size_270"
+            android:layout_height="@dimen/size_270"
+            android:layout_margin="@dimen/size_20"
+            android:src="@drawable/seed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_image_item"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_60"
+            android:layout_marginLeft="@dimen/size_20"
+            android:layout_marginRight="@dimen/size_20"
+            android:layout_marginBottom="@dimen/size_20"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/iv_main" />
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_20"
+            android:fontFamily="@font/san_francisco_display_medium"
+            android:text="Hoa sen đá Cát Tường Hà Lan -  Hà Giang"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rcv_image_item" />
+
+        <TextView
+            android:id="@+id/tv_type_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_20"
+            android:fontFamily="@font/san_francisco_display_medium"
+            android:text="Danh mục"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_20"
+            android:fontFamily="@font/san_francisco_display_medium"
+            android:text="Cây cảnh"
+            android:textColor="@color/mention_color_show"
+            android:textSize="@dimen/size_16"
+            app:layout_constraintStart_toEndOf="@+id/tv_type_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_20"
+            android:fontFamily="@font/san_francisco_display_bold"
+            android:text="200.000 /Kg"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_size_18"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_type_name" />
+
+        <View
+            android:id="@+id/view_underline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:layout_marginTop="@dimen/size_10"
+            android:background="#1F000000"
+            app:layout_constraintTop_toBottomOf="@id/tv_price" />
+
+        <TextView
+            android:id="@+id/tv_date_sell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10"
+            android:fontFamily="@font/san_francisco_display_light"
+            android:text=" •  Ngày đăng bán: 23/2/2020"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_underline" />
+
+        <TextView
+            android:id="@+id/tv_view_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10"
+            android:fontFamily="@font/san_francisco_display_light"
+            android:text=" • Số lượt xem 100"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_date_sell" />
+
+        <TextView
+            android:id="@+id/tv_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10"
+            android:fontFamily="@font/san_francisco_display_light"
+            android:text=" •  Đánh giá ⭐⭐⭐⭐⭐(0)"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_view_count" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10"
+            android:fontFamily="@font/san_francisco_display_bold"
+            android:text="Còn hàng"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_rate" />
+
+        <TextView
+            android:id="@+id/tv_ship_from_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10"
+            android:fontFamily="@font/san_francisco_display_light"
+            android:text=" Giao hàng từ :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_status" />
+
+
+        <TextView
+            android:id="@+id/tv_ship_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10"
+            android:fontFamily="@font/san_francisco_display_bold"
+            android:text=" Hương Sơn -  Quang Bình - Hà Giang"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintStart_toEndOf="@id/tv_ship_from_topic"
+            app:layout_constraintTop_toBottomOf="@id/tv_status" />
+
+
+        <TextView
+            android:id="@+id/tv_item_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10"
+            android:fontFamily="@font/san_francisco_display_light"
+            android:text="Số lượng"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_ship_from_topic" />
+
+        <NumberPicker
+            android:id="@+id/picker_item_count"
+            android:layout_width="@dimen/size_100"
+            android:layout_height="@dimen/size_20"
+            android:layout_margin="@dimen/size_10"
+            android:text="Số lượng"
+            app:layout_constraintStart_toEndOf="@id/tv_item_count"
+            app:layout_constraintTop_toBottomOf="@id/tv_ship_from_topic" />
+
+        <Button
+            android:id="@+id/btn_add_cart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40"
+            android:layout_margin="@dimen/size_20"
+            android:background="@drawable/bg_add_cart_button"
+            android:fontFamily="@font/san_francisco_display_medium"
+            android:text="Thêm vào giỏ hàng"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_count" />
+
+        <Button
+            android:id="@+id/btn_buy_now"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40"
+            android:layout_margin="@dimen/size_20"
+            android:background="@drawable/bg_add_cart_button"
+            android:fontFamily="@font/san_francisco_display_medium"
+            android:text="Mua Ngay"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_add_cart" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10"
+            android:fontFamily="@font/san_francisco_display_light"
+            android:text=" Gọi mua hàng :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_buy_now" />
+
+
+        <TextView
+            android:id="@+id/tv_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10"
+            android:fontFamily="@font/san_francisco_display_medium"
+            android:text="0976.543.211"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_size_15"
+            app:layout_constraintStart_toEndOf="@id/tv_ship_from_topic"
+            app:layout_constraintTop_toBottomOf="@id/btn_buy_now" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.storeform.DetailStoreItemActivity;
 import com.example.storeform.R;
 import com.example.storeform.databinding.CategoryItemBinding;
 import com.example.storeform.databinding.StoreItemBinding;
@@ -75,6 +76,17 @@ public class MyStoreAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             if (storeItem.getSeller() != null)
                 binding.tvSeller.setText(storeItem.getSeller());
 
+            binding.getRoot().setOnClickListener(clickCategoryItemListenner);
+
         }
     }
+
+    private View.OnClickListener clickCategoryItemListenner= new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            DetailStoreItemActivity.start(context);
+        }
+    };
+
+
 }
