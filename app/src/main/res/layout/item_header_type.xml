@@ -4,8 +4,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="@dimen/size_96"
+        android:layout_width="@dimen/size_110"
         android:layout_height="@dimen/size_124"
+        android:layout_margin="@dimen/size_2"
         android:background="@drawable/bg_item_follower">
 
         <androidx.cardview.widget.CardView
@@ -23,7 +24,8 @@
                 android:id="@+id/img_avatar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop" />
+                android:background="@color/all_button"
+                android:src="@color/all_button" />
 
         </androidx.cardview.widget.CardView>
 
@@ -31,17 +33,14 @@
             android:id="@+id/tv_user_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/size_10"
-            android:paddingLeft="@dimen/size_6"
-            android:paddingRight="@dimen/size_6"
+            android:paddingLeft="@dimen/size_2"
+            android:paddingRight="@dimen/size_2"
             android:layout_marginTop="@dimen/size_6"
             android:layout_marginRight="@dimen/size_10"
             android:fontFamily="@font/san_francisco_display_semibold"
             android:gravity="center"
-            android:singleLine="true"
-            android:maxLines="1"
+            android:text="Danh mục sản phẩm"
             android:textColor="#333333"
-            android:ellipsize="end"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/card_avatar"

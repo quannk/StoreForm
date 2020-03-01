@@ -2,11 +2,11 @@ package com.example.storeform.model.enity;
 
 public class CategoryItem {
     private String name;
-    private String type;
+    private int imgResouce;
 
-    public CategoryItem(String name, String type) {
+    public CategoryItem(String name, int imgResouce) {
         this.name = name;
-        this.type = type;
+        this.imgResouce = imgResouce;
     }
 
     public String getName() {
@@ -17,11 +17,11 @@ public class CategoryItem {
         this.name = name;
     }
 
-    public String getType() {
-        return type;
+    public int getImgResouce() {
+        return imgResouce;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setImgResouce(int imgResouce) {
+        this.imgResouce = imgResouce;
     }
 }

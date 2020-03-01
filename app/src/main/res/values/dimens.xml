@@ -60,4 +60,10 @@
     <dimen name="size_124">124dp</dimen>
     <dimen name="size_11">11dp</dimen>
     <dimen name="size_130">130dp</dimen>
+    <dimen name="size_106">106dp</dimen>
+    <dimen name="size_110">110dp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="size_90">90dp</dimen>
+    <dimen name="text_size_28">28sp</dimen>
 </resources>

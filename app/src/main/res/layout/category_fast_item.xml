@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-
-    >
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="@dimen/size_130"
+        android:layout_width="@dimen/size_120"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/size_16"
-        android:background="@drawable/bg_categogy_item">
+        android:layout_marginLeft="@dimen/size_2"
+        android:layout_marginRight="@dimen/size_2"
+        android:padding="@dimen/size_2"
+        android:layout_marginEnd="@dimen/size_16">
 
         <ImageView
             android:id="@+id/iv_top_image"
-            android:layout_width="@dimen/size_85"
-            android:layout_height="@dimen/size_85"
-            android:layout_marginTop="@dimen/size_20"
-            android:background="@color/colorAccent"
+            android:layout_width="@dimen/size_36"
+            android:layout_height="@dimen/size_36"
+            android:background="@drawable/seed"
             android:scaleType="centerCrop"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -25,13 +24,12 @@
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/size_12"
             android:ellipsize="end"
-            android:fontFamily="@font/san_francisco_display_semibold"
-            android:text="Siêu thị sản phẩm BigC"
+            android:fontFamily="@font/san_francisco_display_medium"
+            android:text="Rau củ quả"
             android:textColor="@color/black"
             android:textAlignment="center"
-            android:textSize="@dimen/text_size_18"
+            android:textSize="@dimen/text_size_16"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_top_image" />

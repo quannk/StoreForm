@@ -1,8 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_60"
+            android:fontFamily="@font/san_francisco_display_medium"
+            android:gravity="center"
+            android:text="Tin Nhắn"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_28"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messageList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/size_30"
+            android:layout_marginBottom="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/chatbox"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sms" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chatbox"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/size_80"
+
+            >
+
+            <EditText
+                android:id="@+id/messageInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/sendButton"
+                android:hint="@string/enter_message"
+                android:maxLines="6" />
+
+            <ImageButton
+                android:id="@+id/sendButton"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:clickable="true"
+                android:gravity="center"
+                android:src="@drawable/ic_send_sms_blue" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

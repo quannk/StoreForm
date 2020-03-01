@@ -36,24 +36,35 @@
                     app:layout_constraintRight_toRightOf="parent" />
 
                 <include
-                    android:id="@+id/layout_news"
+                    android:id="@+id/layout_category"
                     layout="@layout/layout_category"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/layout_top_news" />
 
                 <include
-                    android:id="@+id/layout_trending"
-                    layout="@layout/layout_trending"
+                    android:id="@+id/layout_fast_category"
+                    layout="@layout/layout_fast_click_category"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_20"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/layout_news" />
+                    app:layout_constraintTop_toBottomOf="@id/layout_category" />
+
+                <include
+                    android:id="@+id/layout_my_store"
+                    layout="@layout/layout_my_store"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_20"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_category" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

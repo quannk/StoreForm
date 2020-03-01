@@ -14,6 +14,8 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/size_160"
             android:layout_marginTop="@dimen/size_20"
+            android:layout_marginLeft="@dimen/size_6"
+            android:layout_marginRight="@dimen/size_6"
             android:src="@drawable/seed"
             android:scaleType="centerCrop"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -24,7 +26,7 @@
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/san_francisco_display_semibold"
+            android:fontFamily="@font/san_francisco_display_light"
             android:text="Lotus seed"
             android:layout_marginTop="@dimen/size_8"
             android:textColor="@color/black"
@@ -38,12 +40,67 @@
             android:layout_marginStart="@dimen/size_7"
             android:layout_marginTop="@dimen/size_6"
             android:layout_marginBottom="@dimen/size_12"
-            android:fontFamily="@font/san_francisco_display_medium"
+            android:fontFamily="@font/san_francisco_display_light"
             android:text="50.000đ"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_18"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <ImageView
+            android:id="@+id/iv_locate"
+            android:layout_width="@dimen/size_20"
+            android:layout_height="@dimen/size_20"
+            android:layout_marginStart="@dimen/size_7"
+            android:layout_marginTop="@dimen/size_6"
+            android:layout_marginBottom="@dimen/size_12"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/ic_pin"
+            app:layout_constraintTop_toBottomOf="@id/tv_price" />
+
+        <TextView
+            android:id="@+id/tv_locate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_7"
+            android:layout_marginTop="@dimen/size_6"
+            android:layout_marginBottom="@dimen/size_12"
+            android:fontFamily="@font/san_francisco_display_light"
+            android:text="Bắc Kạn"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintLeft_toRightOf="@id/iv_locate"
+
+            app:layout_constraintTop_toBottomOf="@id/tv_price" />
+
+   <ImageView
+            android:id="@+id/iv_seller"
+            android:layout_width="@dimen/size_20"
+            android:layout_height="@dimen/size_20"
+            android:layout_marginStart="@dimen/size_7"
+            android:layout_marginTop="@dimen/size_6"
+            android:layout_marginBottom="@dimen/size_12"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/ic_box"
+            app:layout_constraintTop_toBottomOf="@id/iv_locate" />
+
+        <TextView
+            android:id="@+id/tv_seller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_7"
+            android:layout_marginTop="@dimen/size_6"
+            android:layout_marginBottom="@dimen/size_12"
+            android:fontFamily="@font/san_francisco_display_light"
+            android:text="Công ty cổ phần MMO"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_size_14"
+            app:layout_constraintLeft_toRightOf="@id/iv_seller"
+
+            app:layout_constraintTop_toBottomOf="@id/iv_locate" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

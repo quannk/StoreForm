@@ -21,4 +21,10 @@
     <string name="menu_notification">Thông báo</string>
     <string name="menu_logout">Đăng xuất</string>
     <string name="text_my_bill">Đơn hàng của tôi</string>
+    <string name="tv_vegetable">Rau củ quả</string>
+    <string name="tv_meat">Các loại thịt</string>
+    <string name="tv_drink">Đồ uống</string>
+    <string name="tv_salt">Gia vị</string>
+    <string name="enter_message">Nhập nội dung</string>
+    <string name="username">QuanNK</string>
 </resources>
