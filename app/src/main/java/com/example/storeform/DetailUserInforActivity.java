@@ -3,6 +3,7 @@ package com.example.storeform;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -10,29 +11,19 @@ import androidx.databinding.DataBindingUtil;
 
 import com.example.storeform.databinding.ActivityDetailOrderManagerBinding;
 
-public class DetailOrderManagerActivity extends BaseActivity {
+public class DetailUserInforActivity extends BaseActivity {
     private static final String ORDER_MANAGER_TITLE = "ORDER_MANAGER_TITLE";
     private ActivityDetailOrderManagerBinding binding;
     private String title;
-
-
-    public static void start(Context context, String title) {
-        Intent starter = new Intent(context, DetailOrderManagerActivity.class);
-        starter.putExtra(ORDER_MANAGER_TITLE, title);
-        context.startActivity(starter);
-    }
-
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_detail_order_manager);
-        if (getIntent() != null) {
+
+        if (getIntent() != null)
             title = getIntent().getStringExtra(ORDER_MANAGER_TITLE);
-            binding.tvItemProlife.setText(title);
-        }
+        binding.tvItemProlife.setText(title);
         initView();
     }
-
     private void initView() {
         binding.ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,4 +32,12 @@ public class DetailOrderManagerActivity extends BaseActivity {
             }
         });
     }
+
+
+    public static void start(Context context, String title) {
+        Intent starter = new Intent(context, DetailUserInforActivity.class);
+        starter.putExtra(ORDER_MANAGER_TITLE, title);
+        context.startActivity(starter);
+    }
+
 }

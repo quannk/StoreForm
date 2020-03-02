@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/item_permission_setting_parent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:clickable="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,7 +39,8 @@
             android:lines="1"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_size_17"
+            android:textSize="@dimen/text_size_18"
+            android:text="Danh sách sản phẩm"
             app:layout_constrainedWidth="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iv_back"
@@ -50,6 +52,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintLeft_toLeftOf="parent"
+            tools:listitem="@layout/item_order_status"
+            tools:itemCount="10"
             app:layout_constraintTop_toBottomOf="@+id/header"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -14,7 +14,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.example.storeform.CustomData;
 import com.example.storeform.R;
 import com.example.storeform.databinding.ProfileFragmentBinding;
+import com.example.storeform.model.UserInfor;
 import com.example.storeform.ui.fragment.adapter.ProfileManagerAdapter;
+import com.example.storeform.ui.fragment.adapter.UserInforAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +25,9 @@ public class ProfileFragment extends Fragment {
     private static ProfileFragment instance;
     private ProfileFragmentBinding binding;
     private ProfileManagerAdapter profileManagerAdapter;
+    private UserInforAdapter userInforAdapter ;
     private List<String> listProfileManager = new ArrayList<>();
+    private List<UserInfor> listUserInfor = new ArrayList<>();
 
     public static ProfileFragment newInstance(String s, String s1) {
         if (instance == null)
@@ -41,9 +45,16 @@ public class ProfileFragment extends Fragment {
 
     private void initView() {
         CustomData.addDataProfileManager(listProfileManager);
+        CustomData.addDataUserInfor(listUserInfor);
+
+
         profileManagerAdapter = new ProfileManagerAdapter(listProfileManager,getContext());
         binding.rcvProfileManager.setLayoutManager(new LinearLayoutManager(null));
         binding.rcvProfileManager.setAdapter(profileManagerAdapter);
+
+        userInforAdapter = new UserInforAdapter(listUserInfor, getContext());
+        binding.rcvProfileInfor.setLayoutManager(new LinearLayoutManager(null));
+        binding.rcvProfileInfor.setAdapter(userInforAdapter);
     }
 
 }

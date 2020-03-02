@@ -57,5 +57,6 @@
     <color name="corona_progress_safe">#FBAF43</color>
     <color name="corona_progress_background">#ECEFF1</color>
     <color name="gray_E5E5E5">#E5E5E5</color>
+    <color name="red_FF0000">#FF0000</color>
 
 </resources>

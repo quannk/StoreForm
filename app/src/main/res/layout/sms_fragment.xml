@@ -36,8 +36,6 @@
             android:background="#ffffff"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="@dimen/size_60"
-
             >
 
             <EditText

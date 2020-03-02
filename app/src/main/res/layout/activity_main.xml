@@ -7,9 +7,10 @@
     >
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:id="@+id/container"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintTop_toTopOf="parent"
         >
         <!-- Main content -->
 
@@ -17,7 +18,7 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/size_50"
         android:layout_gravity="bottom"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"

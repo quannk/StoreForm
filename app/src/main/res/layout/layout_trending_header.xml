@@ -27,7 +27,7 @@
             android:layout_marginTop="@dimen/size_12"
             android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/item_header_type"
+            tools:listitem="@layout/item_order_status"
             android:layout_height="wrap_content"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

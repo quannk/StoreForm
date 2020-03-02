@@ -26,6 +26,10 @@
             android:name=".DetailOrderManagerActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".DetailUserInforActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
 
     </application>
 
