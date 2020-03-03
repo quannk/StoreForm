@@ -9,10 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.storeform.ListOrderUserInforActivity;
 import com.example.storeform.R;
 import com.example.storeform.databinding.ItemProfileInfoBinding;
 import com.example.storeform.model.UserInfor;
-import com.example.storeform.DetailUserInforActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,7 +67,7 @@ public class UserInforAdapter extends RecyclerView.Adapter<UserInforAdapter.Prof
             binding.getRoot().setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    DetailUserInforActivity.start(context, title);
+                    ListOrderUserInforActivity.start(context, title);
                 }
             });
 
