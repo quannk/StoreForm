@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/size_130"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_6"
+        android:background="@drawable/bg_categogy_item">
+
+        <ImageView
+            android:id="@+id/iv_top_image"
+            android:layout_width="@dimen/size_110"
+            android:layout_height="@dimen/size_110"
+            android:layout_marginTop="@dimen/size_20"
+            android:background="@drawable/bidaochanh"
+            android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/san_francisco_display_semibold"
+            android:text="Rau củ"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_size_18"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@color/black_trans_50"
+            app:layout_constraintBottom_toBottomOf="@id/iv_top_image" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
