@@ -27,7 +27,7 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".DetailUserInforActivity"
+            android:name=".ListOrderUserInforActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
