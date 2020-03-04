@@ -24,6 +24,7 @@ public class DetailUserInforActivity extends BaseActivity {
         binding.tvItemProlife.setText(title);
         initView();
     }
+
     private void initView() {
         binding.ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
