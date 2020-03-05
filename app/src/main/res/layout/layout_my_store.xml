@@ -52,7 +52,7 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintTop_toBottomOf="@id/header"
             app:layout_constraintLeft_toLeftOf="parent"
-            tools:listitem="@layout/store_item" />
+            tools:listitem="@layout/item_store" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/header_vegetable"
@@ -91,7 +91,7 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintTop_toBottomOf="@id/header_vegetable"
             app:layout_constraintLeft_toLeftOf="parent"
-            tools:listitem="@layout/store_item" />
+            tools:listitem="@layout/item_store" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/header_meat"
@@ -131,7 +131,7 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/header_meat"
-            tools:listitem="@layout/store_item" />
+            tools:listitem="@layout/item_store" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

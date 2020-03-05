@@ -18,6 +18,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/size_44"
                 android:background="@color/white"
+                android:visibility="gone"
                 android:elevation="2dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -98,11 +99,11 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/card_avatar"
-                        android:layout_width="@dimen/size_100"
-                        android:layout_height="@dimen/size_100"
+                        android:layout_width="@dimen/size_80"
+                        android:layout_height="@dimen/size_80"
                         android:layout_marginLeft="@dimen/size_20"
                         android:layout_marginTop="@dimen/size_20"
-                        app:cardCornerRadius="@dimen/size_50"
+                        app:cardCornerRadius="@dimen/size_40"
                         app:cardPreventCornerOverlap="false"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
@@ -112,7 +113,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/ic_beer" />
+                            android:src="@drawable/ic_fruit" />
 
                     </androidx.cardview.widget.CardView>
 
@@ -158,7 +159,7 @@
                     android:gravity="left"
                     android:text="Nguy Khac Quan"
                     android:textColor="#111111"
-                    android:textSize="@dimen/text_size_18"
+                    android:textSize="@dimen/text_size_20"
                     app:layout_constraintLeft_toRightOf="@id/layout_card_avatar"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

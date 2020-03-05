@@ -51,6 +51,7 @@
     <color name="gray_848484">#848484</color>
 
     <color name="background">#dddddd</color>
+    <color name="color_FF132593">#132593</color>
     <color name="mention_color_show">#096B91</color>
     <color name="black">#000000</color>
     <color name="corona_progress_dangerous">#F84B30</color>

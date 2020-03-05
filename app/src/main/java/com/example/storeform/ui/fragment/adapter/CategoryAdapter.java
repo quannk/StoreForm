@@ -34,7 +34,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         CategoryItemBinding categoryItemBinding = DataBindingUtil.inflate(
-                LayoutInflater.from(context), R.layout.category_item, parent, false);
+                LayoutInflater.from(context), R.layout.item_category, parent, false);
         return new CategoryItemViewHolder(categoryItemBinding.getRoot(), categoryItemBinding);
     }
 

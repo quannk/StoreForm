@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.storeform.DetailStoreItemActivity;
 import com.example.storeform.R;
-import com.example.storeform.databinding.CategoryItemBinding;
+import com.example.storeform.SellerDetailActivity;
 import com.example.storeform.databinding.StoreItemBinding;
 import com.example.storeform.model.enity.StoreItem;
 
@@ -37,7 +37,7 @@ public class MyStoreAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         StoreItemBinding  storeItemBinding = DataBindingUtil.inflate(
-                LayoutInflater.from(context), R.layout.store_item, parent, false);
+                LayoutInflater.from(context), R.layout.item_store, parent, false);
         return new StoreItemViewHolder(storeItemBinding.getRoot(), storeItemBinding);
     }
 
@@ -75,6 +75,13 @@ public class MyStoreAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
             if (storeItem.getSeller() != null)
                 binding.tvSeller.setText(storeItem.getSeller());
+            binding.tvSeller.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    SellerDetailActivity.start(context);
+                }
+            });
 
             binding.getRoot().setOnClickListener(clickCategoryItemListenner);
 

@@ -12,11 +12,11 @@ public class CustomData {
     public static void addDataStore(List<StoreItem> storeItemList) {
         if (storeItemList.size() > 0) return;
 
-        storeItemList.add(new StoreItem("Bún khô", "", "35.000", "Bắc Kạn", "Nông nghiệp Bắc Kạn"));
-        storeItemList.add(new StoreItem("Bún khô", "", "35.000", "Bắc Kạn", "Nông nghiệp Bắc Kạn"));
-        storeItemList.add(new StoreItem("Bún khô", "", "35.000", "Bắc Kạn", "Nông nghiệp Bắc Kạn"));
-        storeItemList.add(new StoreItem("Bún khô", "", "35.000", "Bắc Kạn", "Nông nghiệp Bắc Kạn"));
-        storeItemList.add(new StoreItem("Bún khô", "", "35.000", "Bắc Kạn", "Nông nghiệp Bắc Kạn"));
+        storeItemList.add(new StoreItem("Bông cải xanh", "", "35.000", "Bắc Kạn", "Nông nghiệp Bắc Kạn"));
+        storeItemList.add(new StoreItem("Bông cải đỏ", "", "28.000", "Hà Nam", "Nông nghiệp Hà Nam"));
+        storeItemList.add(new StoreItem("Bông cải xanh", "", "25.000", "Bắc Kạn", "Nông nghiệp Kiên Giang"));
+        storeItemList.add(new StoreItem("Bông cải xanh", "", "11.000", "Hà Nam", "Nông nghiệp Bắc Giang"));
+        storeItemList.add(new StoreItem("Bông cải xanh", "", "35.000", "Bắc Kạn", "Nông nghiệp Bắc Kạn"));
     }
 
     public static void addDataCategogy(List<CategoryItem> storeItemList) {

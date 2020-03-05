@@ -15,7 +15,7 @@
             android:layout_width="@dimen/size_85"
             android:layout_height="@dimen/size_85"
             android:layout_marginTop="@dimen/size_20"
-            android:background="@color/colorAccent"
+            android:background="@drawable/ic_tomato"
             android:scaleType="centerCrop"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
