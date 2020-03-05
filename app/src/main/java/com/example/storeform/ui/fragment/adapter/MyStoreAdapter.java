@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.storeform.DetailStoreItemActivity;
 import com.example.storeform.R;
 import com.example.storeform.SellerDetailActivity;
-import com.example.storeform.databinding.StoreItemBinding;
+import com.example.storeform.databinding.ItemStoreBinding;
 import com.example.storeform.model.enity.StoreItem;
 
 import java.util.ArrayList;
@@ -36,7 +36,7 @@ public class MyStoreAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        StoreItemBinding  storeItemBinding = DataBindingUtil.inflate(
+        ItemStoreBinding storeItemBinding = DataBindingUtil.inflate(
                 LayoutInflater.from(context), R.layout.item_store, parent, false);
         return new StoreItemViewHolder(storeItemBinding.getRoot(), storeItemBinding);
     }
@@ -53,9 +53,9 @@ public class MyStoreAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     private class StoreItemViewHolder extends RecyclerView.ViewHolder {
-        StoreItemBinding binding ;
+        ItemStoreBinding binding ;
 
-        public StoreItemViewHolder(View root, StoreItemBinding categoryItemBinding) {
+        public StoreItemViewHolder(View root, ItemStoreBinding categoryItemBinding) {
             super(root);
             this.binding = categoryItemBinding;
 

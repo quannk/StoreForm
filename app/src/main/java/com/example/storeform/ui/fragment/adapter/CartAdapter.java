@@ -10,21 +10,20 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.storeform.R;
-import com.example.storeform.databinding.CategoryFastItemBinding;
-import com.example.storeform.model.enity.CategoryItem;
+import com.example.storeform.databinding.ItemCartBinding;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FastCategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class CartAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
-    private List<CategoryItem> categoryItemList = new ArrayList<>();
+    private List<String> categoryItemList = new ArrayList<>();
 
-    public FastCategoryAdapter(Context context) {
+    public CartAdapter(Context context) {
         this.context = context;
     }
 
-    public void setCategoryItemList(List<CategoryItem> categoryItemList) {
+    public void setCartItemList(List<String> categoryItemList) {
         this.categoryItemList.clear();
         this.categoryItemList = categoryItemList;
         notifyDataSetChanged();
@@ -33,9 +32,9 @@ public class FastCategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        CategoryFastItemBinding categoryFastItemBinding = DataBindingUtil.inflate(
-                LayoutInflater.from(context), R.layout.category_fast_item, parent, false);
-        return new CategoryItemViewHolder(categoryFastItemBinding.getRoot(), categoryFastItemBinding);
+        ItemCartBinding categoryItemBinding = DataBindingUtil.inflate(
+                LayoutInflater.from(context), R.layout.item_cart, parent, false);
+        return new CartItemViewHolder(categoryItemBinding.getRoot(), categoryItemBinding);
     }
 
     @Override
@@ -48,8 +47,8 @@ public class FastCategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         return 10;
     }
 
-    private class CategoryItemViewHolder extends RecyclerView.ViewHolder {
-        public CategoryItemViewHolder(View root, CategoryFastItemBinding categoryItemBinding) {
+    private class CartItemViewHolder extends RecyclerView.ViewHolder {
+        public CartItemViewHolder(View root, ItemCartBinding categoryItemBinding) {
 
             super(root);
         }

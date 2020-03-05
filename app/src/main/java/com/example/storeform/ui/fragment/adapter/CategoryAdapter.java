@@ -10,7 +10,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.storeform.R;
-import com.example.storeform.databinding.CategoryItemBinding;
+import com.example.storeform.databinding.ItemCategoryBinding;
 import com.example.storeform.model.enity.CategoryItem;
 
 import java.util.ArrayList;
@@ -33,7 +33,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        CategoryItemBinding categoryItemBinding = DataBindingUtil.inflate(
+        ItemCategoryBinding categoryItemBinding = DataBindingUtil.inflate(
                 LayoutInflater.from(context), R.layout.item_category, parent, false);
         return new CategoryItemViewHolder(categoryItemBinding.getRoot(), categoryItemBinding);
     }
@@ -49,7 +49,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     }
 
     private class CategoryItemViewHolder extends RecyclerView.ViewHolder {
-        public CategoryItemViewHolder(View root, CategoryItemBinding categoryItemBinding) {
+        public CategoryItemViewHolder(View root, ItemCategoryBinding categoryItemBinding) {
 
             super(root);
         }
