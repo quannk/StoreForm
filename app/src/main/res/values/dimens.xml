@@ -74,4 +74,7 @@
     <dimen name="size_47">47dp</dimen>
     <dimen name="size_46">46dp</dimen>
     <dimen name="size_95">95dp</dimen>
+    <dimen name="size_70">70dp</dimen>
+    <dimen name="size_370">370dp</dimen>
+    <dimen name="size_350">350dp</dimen>
 </resources>

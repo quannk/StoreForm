@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_20"
+            android:fontFamily="@font/san_francisco_display_medium"
+            android:text="Hoa sen đá Cát Tường Hà Lan -  Hà Giang"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/iv_theme_seller"
+            android:layout_width="@dimen/size_350"
+            android:layout_height="@dimen/size_300"
+            android:layout_margin="@dimen/size_10"
+            android:scaleType="fitXY"
+            android:src="@drawable/seed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <ImageView
+            android:id="@+id/iv_avatar_seller"
+            android:layout_width="@dimen/size_70"
+            android:layout_height="@dimen/size_70"
+            android:layout_marginLeft="@dimen/size_10"
+            android:background="@drawable/bg_avarta"
+            android:src="@drawable/seed"
+            app:layout_constraintBottom_toBottomOf="@id/iv_theme_seller"
+            app:layout_constraintLeft_toLeftOf="@id/iv_theme_seller" />
+
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_20"
+            android:fontFamily="@font/san_francisco_display_medium"
+            android:text="1 năm"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_theme_seller" />
+
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_20"
+            android:fontFamily="@font/san_francisco_display_regular"
+            android:text="Địa chỉ: Thôn Phủ, Hương Sơn, Quang Bình, Hà Giang"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_year" />
+
+        <View
+            android:id="@+id/view_underline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:layout_marginTop="@dimen/size_10"
+            android:background="#1F000000"
+            app:layout_constraintTop_toBottomOf="@id/tv_location" />
+
+        <TextView
+            android:id="@+id/tv_check1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10"
+            android:fontFamily="@font/san_francisco_display_bold"
+            android:text="Phổ thông"
+            android:textColor="@color/color00AF80"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintLeft_toRightOf="@+id/iv_check1"
+            app:layout_constraintTop_toBottomOf="@id/view_underline" />
+
+
+        <ImageView
+            android:id="@+id/iv_check1"
+            android:layout_width="@dimen/size_16"
+            android:layout_height="@dimen/size_16"
+            android:layout_margin="@dimen/size_10"
+            android:src="@drawable/ic_tick"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_underline" />
+        <TextView
+            android:id="@+id/tv_check2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10"
+            android:fontFamily="@font/san_francisco_display_bold"
+            android:text="Quy chuẩn việt nam"
+            android:textColor="@color/color00AF80"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintLeft_toRightOf="@+id/iv_check2"
+            app:layout_constraintTop_toBottomOf="@id/iv_check1" />
+
+
+        <ImageView
+            android:id="@+id/iv_check2"
+            android:layout_width="@dimen/size_16"
+            android:layout_height="@dimen/size_16"
+            android:layout_margin="@dimen/size_10"
+            android:src="@drawable/ic_tick"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_check1" />
+
+        <TextView
+            android:id="@+id/tv_view_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10"
+            android:fontFamily="@font/san_francisco_display_light"
+            android:text=" • Số lượt xem 100"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_check2" />
+
+        <TextView
+            android:id="@+id/tv_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10"
+            android:fontFamily="@font/san_francisco_display_light"
+            android:text=" •  Đánh giá ⭐⭐⭐⭐⭐(75)"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_view_count" />
+
+
+
+        <Button
+            android:id="@+id/btn_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_40"
+            android:layout_margin="@dimen/size_20"
+            android:background="@drawable/bg_add_cart_button"
+            android:fontFamily="@font/san_francisco_display_medium"
+            android:text="Chat"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_rate" />
+
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10"
+            android:fontFamily="@font/san_francisco_display_light"
+            android:text=" Số điện thoại :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_chat" />
+
+
+        <TextView
+            android:id="@+id/tv_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10"
+            android:fontFamily="@font/san_francisco_display_medium"
+            android:text="0976.543.211"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_size_15"
+            app:layout_constraintStart_toEndOf="@id/btn_chat"
+            app:layout_constraintTop_toBottomOf="@id/btn_chat" />
+
+        <include
+            android:id="@+id/layout_detail_seller"
+            layout="@layout/layout_detail_seller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_phone_number"
+            android:layout_marginTop="@dimen/size_10"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
