@@ -15,6 +15,7 @@ import com.example.storeform.databinding.ItemCartBinding;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class CartAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private List<String> categoryItemList = new ArrayList<>();
